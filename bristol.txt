@@ -1,0 +1,10 @@
+1.SELECT count(customer_id) as CustomerCountDistinct
+from Customer
+
+2.SELECT country_name,count(customer_id) as CustomerCountDistinct
+from Customer join Countries 
+on Customer.country_code=Countries.country_code
+where country_name='Italy' or country_name='France'
+group by country_name
+
+
